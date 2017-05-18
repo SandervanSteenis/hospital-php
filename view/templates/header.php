@@ -6,6 +6,7 @@
 	<title>Hospital</title>	
 	<link rel="stylesheet" href="<?= URL ?>/css/style.css">
 <body>
+    <h1>Hospital</h1>
 	<nav>
 	<ul>
 	    <li><a href="<?= URL ?>client/index">Clients</a></li>

@@ -1,6 +1,4 @@
- <h1>Hospital</h1>
-
- <h2>Species</h2>
+<h2>Species</h2>
  
 <div class="container">
 	<table border="1">
