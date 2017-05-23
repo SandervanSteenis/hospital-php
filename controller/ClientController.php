@@ -46,7 +46,7 @@ function editSave()
 
 function delete($id)
 {
-	if (!deletClient($id)) {
+	if (!deleteClient($id)) {
 		header("Location:" . URL . "error/index");
 		exit();
 	}

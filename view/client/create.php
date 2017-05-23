@@ -1,13 +1,15 @@
 <div class="container">
-    <h1>Vul de gegevens in</h1>
-	<form action="<?= URL ?>birthday/createSave" method="post">
-	
-		<input type="text" name="person" placeholder="Name | John">
-		<input type="text" name="day" placeholder="Day | 5">
-		<input type="text" name="month" placeholder="Month | 8">
-		<input type="text" name="year" placeholder="Year | 1990">
-		<input type="submit" value="Verzenden">
-	
-	</form>
-
+	<h1>Client Toevoegen</h1>
+		<form action="<?= URL ?>client/createSave" method="post">
+			<div>
+	          <input id="name" type="text" name="firstname">
+	          <label for="firstname">Firstname</label>
+	        </div>
+	        <div>
+	          <input id="name" type="text" name="lastname">
+	          <label for="lastname">Lastname</label>
+	        </div>
+			<input type="submit" value="Toevoegen">
+			<a href="<?= URL ?>client/index">Annuleer</a>
+		</form>
 </div>

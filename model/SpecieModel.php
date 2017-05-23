@@ -19,3 +19,37 @@ function getAllSpecies()
 	$db = null;
 	return $query->fetchAll();
 } 
+
+function createSpecie() {
+	
+	$description = isset($_POST['description']) ? $_POST['description'] : null;
+	if (strlen($description) == 0) {
+		return false;
+	}
+	
+	$db = openDatabaseConnection();
+	$sql = "INSERT INTO species(species_description) VALUES (:description)";
+	$query = $db->prepare($sql);
+	$query->execute(array(
+		':description' => $description));
+	$db = null;
+	
+	return true;
+}
+
+function deleteSpecie($id = null) 
+{
+	if (!$id) {
+		return false;
+	}
+	
+	$db = openDatabaseConnection();
+
+	$sql = "DELETE FROM species WHERE species_id=:id ";
+	$query = $db->prepare($sql);
+	$query->execute(array(
+		':id' => $id));
+	$db = null;
+	
+	return true;
+}
