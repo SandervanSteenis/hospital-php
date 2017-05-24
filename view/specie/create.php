@@ -3,7 +3,7 @@
 		<form action="<?= URL ?>specie/createSave" method="post">
 			<div>
 	          <input type="text" name="description">
-	          <label for="description">Animal</label>
+	          <label for="description">Dier</label>
 	        </div>
 			<input type="submit" value="Toevoegen">
 			<a href="<?= URL ?>specie/index">Annuleer</a>

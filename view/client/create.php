@@ -3,11 +3,11 @@
 		<form action="<?= URL ?>client/createSave" method="post">
 			<div>
 	          <input id="name" type="text" name="firstname">
-	          <label for="firstname">Firstname</label>
+	          <label for="firstname">Voornaam</label>
 	        </div>
 	        <div>
 	          <input id="name" type="text" name="lastname">
-	          <label for="lastname">Lastname</label>
+	          <label for="lastname">Achternaam</label>
 	        </div>
 			<input type="submit" value="Toevoegen">
 			<a href="<?= URL ?>client/index">Annuleer</a>

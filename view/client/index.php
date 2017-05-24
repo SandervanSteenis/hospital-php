@@ -3,8 +3,8 @@
 <div class="container">
 	<table border="1">
 		<tr>
-			<th>Firstname</th>
-			<th>Lastname</th>
+			<th>Voornaam</th>
+			<th>Achternaam</th>
 			<th colspan="2">Action</th>
 		</tr>
 		
