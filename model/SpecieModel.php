@@ -18,10 +18,29 @@ function getAllSpecies()
 	$query->execute();
 	$db = null;
 	return $query->fetchAll();
+}
+
+function editSpecie() 
+{
+	$description = isset($_POST['description']) ? $_POST['description'] : null;
+	if (strlen($description) == 0) {
+		return false;
+	}
+	
+	$db = openDatabaseConnection();
+	$sql = "UPDATE species SET species_description = :description WHERE species_id = :id";
+	$query = $db->prepare($sql);
+	$query->execute(array(
+		':description' => $description,
+			':id' => $id
+		));
+	$db = null;
+	
+	return true;
 } 
 
-function createSpecie() {
-	
+function createSpecie() 
+{
 	$description = isset($_POST['description']) ? $_POST['description'] : null;
 	if (strlen($description) == 0) {
 		return false;
@@ -31,7 +50,8 @@ function createSpecie() {
 	$sql = "INSERT INTO species(species_description) VALUES (:description)";
 	$query = $db->prepare($sql);
 	$query->execute(array(
-		':description' => $description));
+		':description' => $description
+		));
 	$db = null;
 	
 	return true;
@@ -45,7 +65,7 @@ function deleteSpecie($id = null)
 	
 	$db = openDatabaseConnection();
 
-	$sql = "DELETE FROM species WHERE species_id=:id ";
+	$sql = "DELETE FROM species WHERE species_id=:id";
 	$query = $db->prepare($sql);
 	$query->execute(array(
 		':id' => $id));

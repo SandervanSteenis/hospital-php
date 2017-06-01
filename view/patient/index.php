@@ -3,8 +3,8 @@
 <div class="container">
 	<table border="1">
 		<tr>
-			<th>Name</th>
-			<th>Species</th>
+			<th>Naam</th>
+			<th>Dier</th>
 			<th>Status</th>
 			<th>Client</th>
 			<th colspan="2">Action</th>
@@ -13,7 +13,7 @@
 		<?php foreach ($patients as $patient) { ?>
 		<tr>
 			<td><?= $patient['patient_name']; ?></td>
-			<td><?= $patient['patient_id']; ?></td>
+			<td><?= $species[$patient['species_id'] - 1]['species_description']; ?></td>
 			<td><?= $patient['patient_status']; ?></td>
 			<td><?= $patient['client_id']; ?></td>
 			<td><a href="<?= URL ?>patient/edit/<?= $patient['patient_id'] ?>">Edit</a></td>
