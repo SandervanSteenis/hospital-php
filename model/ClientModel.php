@@ -1,10 +1,10 @@
 <?php
 
-function getClients($id) 
+function getClient($id) 
 {
 	$db = openDatabaseConnection();
 
-	$sql = "SELECT * FROM clients WHERE id = :id";
+	$sql = "SELECT * FROM clients WHERE client_id = :id";
 	$query = $db->prepare($sql);
 	$query->execute(array(":id" => $id));
 	$db = null;

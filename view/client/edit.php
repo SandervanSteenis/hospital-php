@@ -1,5 +1,5 @@
 <div class="container">
-	<h1>Wijzigen</h1>
+	<h1>Client Wijzigen</h1>
 		<form action="<?= URL ?>client/editSave" method="post">
 			<div>
 	          <input id="name" type="text" name="firstname" value="<?= $client['client_firstname']; ?>">
