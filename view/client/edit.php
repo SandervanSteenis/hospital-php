@@ -11,9 +11,6 @@
 	        </div>
 			<input type="hidden" name="id" value="<?= $client['client_id']; ?>">
             <input type="submit" value="Bijwerken">
-            <a href="<?= URL ?>client/delete/<?= $client['client_id'] ?>">Verwijder
-                <i class="material-icons right">delete</i>
-            </a>
             <a href="<?= URL ?>client/index">Annuleer</a>
 		</form>
 </div>
