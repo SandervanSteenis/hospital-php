@@ -30,6 +30,17 @@ function getAllSpecies()
 	$db = null;
 	return $query->fetchAll();
 }
+//testing
+function getAllClients() 
+{
+	$db = openDatabaseConnection();
+
+	$sql = "SELECT * FROM clients";
+	$query = $db->prepare($sql);
+	$query->execute();
+	$db = null;
+	return $query->fetchAll();
+}
 
 function createPatient() {
 	$name = isset($_POST['name']) ? $_POST['name'] : null;
@@ -42,7 +53,7 @@ function createPatient() {
 	}
 	
 	$db = openDatabaseConnection();
-	$sql = "INSERT INTO patient(patient_name, species_id, patient_status, clients_id) VALUES (:name, :species, :status, :clients)";
+	$sql = "INSERT INTO patients(patient_name, species_id, patient_status, clients_id) VALUES (:name, :species, :status, :clients)";
 	$query = $db->prepare($sql);
 	$query->execute(array(
 		':name' => $name,

@@ -6,7 +6,8 @@ function index()
 {
 	render("patient/index", array(
 		'patients' => getAllPatients(),
-		'species' => getAllSpecies()
+		'clients' => getAllClients(),
+ 		'species' => getAllSpecies()
 	));
 }
 
