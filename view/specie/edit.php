@@ -1,14 +1,12 @@
 <div class="container">
-	<h1>Edit</h1>
-	<form action="<?= URL ?>birthday/editSave" method="post">
-	
-		<input type="text" name="person" value="<?= $birthday['person']; ?>">
-		<input type="text" name="day" value="<?= $birthday['day']; ?>">
-		<input type="text" name="month" value="<?= $birthday['month']; ?>">
-		<input type="text" name="year" value="<?= $birthday['year']; ?>">
-		<input type="hidden" name="id" value="<?= $birthday['id']; ?>">
-		<input type="submit" value="Verzenden">
-	
-	</form>
-
+	<h1>Specie Wijzigen</h1>
+		<form action="<?= URL ?>specie/editSave" method="post">
+			<div>
+	          <input id="name" type="text" name="Animal" value="<?= $specie['species_description']; ?>">
+	          <label for="Animal">Dier</label>
+	        </div>
+			<input type="hidden" name="id" value="<?= $specie['species_id']; ?>">
+            <input type="submit" value="Bijwerken">
+            <a href="<?= URL ?>specie/index">Annuleer</a>
+		</form>
 </div>
