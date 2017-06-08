@@ -20,9 +20,11 @@ function getAllSpecies()
 	return $query->fetchAll();
 }
 
-function editSpecie() 
+function editSpecie()
 {
 	$description = isset($_POST['description']) ? $_POST['description'] : null;
+	$id = isset($_POST['id']) ? $_POST['id'] : null;
+	
 	if (strlen($description) == 0) {
 		return false;
 	}
@@ -32,12 +34,12 @@ function editSpecie()
 	$query = $db->prepare($sql);
 	$query->execute(array(
 		':description' => $description,
-			':id' => $id
+		':id' => $id
 		));
 	$db = null;
 	
 	return true;
-} 
+}
 
 function createSpecie() 
 {
