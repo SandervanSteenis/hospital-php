@@ -4,7 +4,7 @@
 	<table border="1">
 		<tr>
 			<th>Naam</th>
-			<th>Dier</th>
+			<th>Diersoort</th>
 			<th>Status</th>
 			<th>Client</th>
 			<th colspan="2">Action</th>

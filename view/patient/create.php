@@ -6,7 +6,7 @@
 	          <label for="name">Naam</label>
 			<br>
  			 <input type="text" name="description">
-	          <label for="description">Dier</label>
+	          <label for="description">Diersoort</label>
 				<br>
 				<br>
 	          <textarea name="status" maxlength="500" data-length="500"></textarea>
