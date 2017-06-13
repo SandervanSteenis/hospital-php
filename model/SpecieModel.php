@@ -3,7 +3,7 @@ function getSpecie($id)
 {
 	$db = openDatabaseConnection();
 
-	$sql = "SELECT * FROM species WHERE id = :id";
+	$sql = "SELECT * FROM species WHERE species_id = :id";
 	$query = $db->prepare($sql);
 	$query->execute(array(":id" => $id));
 	$db = null;
