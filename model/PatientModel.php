@@ -42,13 +42,14 @@ function getAllClients()
 	return $query->fetchAll();
 }
 
-function createPatient() {
+function createPatient() 
+{
 	$name = isset($_POST['name']) ? $_POST['name'] : null;
 	$species = isset($_POST['species']) ? $_POST['species'] : null;
 	$status = isset($_POST['status']) ? $_POST['status'] : null;
 	$clients = isset($_POST['clients']) ? $_POST['clients'] : null;
 	
-	if (strlen($name) == 0 || strlen($gender) == 0 || strlen($species) == 0 || strlen($status) == 0 || strlen($clients) == 0) {
+	if (strlen($name) == 0 || strlen($species) == 0 || strlen($status) == 0 || strlen($clients) == 0) {
 		return false;
 	}
 	
