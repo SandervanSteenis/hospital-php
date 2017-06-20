@@ -5,16 +5,16 @@
 	          <input type="text" name="name">
 	          <label for="name">Naam</label>
 			<br>
- 			 <input type="text" name="description">
-	          <label for="description">Diersoort</label>
+ 			 <input type="text" name="species">
+	          <label for="species">Diersoort</label>
 				<br>
 				<br>
 	          <textarea name="status" maxlength="500" data-length="500"></textarea>
 				<label for="status">Status</label>
 				<br>
 				<br>
-	            <input type="text" name="firstname">
-	          <label for="firstname">Client</label>
+	            <input type="text" name="clients">
+	          <label for="clients">Client</label>
 	        </div>
 			<input type="submit" value="Toevoegen">
 			<a href="<?= URL ?>patient/index">Annuleer</a>

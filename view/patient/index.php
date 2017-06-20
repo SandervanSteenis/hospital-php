@@ -13,9 +13,9 @@
 		<?php foreach ($patients as $patient) { ?>
 		<tr>
 			<td><?= $patient['patient_name']; ?></td>
-			<td><?= $species[$patient['species_id'] - 1]['species_description']; ?></td>
+			<td><?= $patient['species_description']; ?></td>
 			<td><?= $patient['patient_status']; ?></td>
-			<td><?= $clients[$patient['client_id'] - 1]['client_firstname']; ?></td>
+            <td><?= $patient['client_firstname']; ?> <?= $patient['client_lastname']; ?></td> 
 			<td><a href="<?= URL ?>patient/edit/<?= $patient['patient_id'] ?>">Edit</a></td>
 			<td><a href="<?= URL ?>patient/delete/<?= $patient['patient_id'] ?>">Delete</a></td>
 		</tr>

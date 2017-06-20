@@ -9,16 +9,20 @@ function getPatients($id)
 	$db = null;
 	return $query->fetch();
 }
-function getAllPatients() 
-{
-	$db = openDatabaseConnection();
 
-	$sql = "SELECT * FROM patients";
-	$query = $db->prepare($sql);
-	$query->execute();
-	$db = null;
-	return $query->fetchAll();
-} 
+function getPatientsWithSpeciesDescription()
+{
+    $db = openDatabaseConnection();
+
+    $sql = "SELECT * FROM patients INNER JOIN species ON patients.species_id = species.species_id JOIN clients ON patients.client_id = clients.client_id ORDER BY patient_id";
+    $query = $db->prepare($sql);
+    $query->execute();
+
+    $db = null;
+
+return $query->fetchAll();
+}
+
 // testing
 function getAllSpecies() 
 {
@@ -54,7 +58,7 @@ function createPatient()
 	}
 	
 	$db = openDatabaseConnection();
-	$sql = "INSERT INTO patients(patient_name, species_id, patient_status, clients_id) VALUES (:name, :species, :status, :clients)";
+	$sql = "INSERT INTO patients(patient_name, species_id, patient_status, client_id) VALUES (:name, :species, :status, :clients)";
 	$query = $db->prepare($sql);
 	$query->execute(array(
 		':name' => $name,

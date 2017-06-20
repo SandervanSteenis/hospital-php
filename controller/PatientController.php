@@ -5,7 +5,7 @@ require(ROOT . "model/PatientModel.php");
 function index()
 {
 	render("patient/index", array(
-		'patients' => getAllPatients(),
+		'patients' => getPatientsWithSpeciesDescription(),
 		'clients' => getAllClients(),
  		'species' => getAllSpecies()
 	));
