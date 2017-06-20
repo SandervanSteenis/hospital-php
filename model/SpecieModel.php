@@ -44,6 +44,7 @@ function editSpecie()
 function createSpecie() 
 {
 	$description = isset($_POST['description']) ? $_POST['description'] : null;
+	
 	if (strlen($description) == 0) {
 		return false;
 	}

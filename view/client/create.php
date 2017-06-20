@@ -2,11 +2,11 @@
 	<h1>Client Toevoegen</h1>
 		<form action="<?= URL ?>client/createSave" method="post">
 			<div>
-	          <input id="name" type="text" name="firstname">
+	          <input type="text" name="firstname">
 	          <label for="firstname">Voornaam</label>
 	        </div>
 	        <div>
-	          <input id="name" type="text" name="lastname">
+	          <input type="text" name="lastname">
 	          <label for="lastname">Achternaam</label>
 	        </div>
 			<input type="submit" value="Toevoegen">

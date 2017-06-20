@@ -26,6 +26,7 @@ function createClient()
 {
 	$firstname = isset($_POST['firstname']) ? $_POST['firstname'] : null;
 	$lastname = isset($_POST['lastname']) ? $_POST['lastname'] : null;
+	
 	if (strlen($firstname) == 0 || strlen($lastname) == 0) {
 		return false;
 	}
