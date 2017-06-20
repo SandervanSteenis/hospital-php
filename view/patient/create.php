@@ -6,7 +6,7 @@
 	          <label for="name">Naam</label>
 			<br>
  			 <input type="text" name="species">
-	          <label for="species">Diersoort</label>
+	          <label for="species">Diersoort(id)</label>
 				<br>
 				<br>
 	          <textarea name="status" maxlength="500" data-length="500"></textarea>
@@ -14,7 +14,7 @@
 				<br>
 				<br>
 	            <input type="text" name="clients">
-	          <label for="clients">Client</label>
+	          <label for="clients">Client(id)</label>
 	        </div>
 			<input type="submit" value="Toevoegen">
 			<a href="<?= URL ?>patient/index">Annuleer</a>
