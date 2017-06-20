@@ -70,6 +70,33 @@ function createPatient()
 	return true;
 }
 
+function editPatient() 
+{
+	$name = isset($_POST['name']) ? $_POST['name'] : null;
+	$species = isset($_POST['species']) ? $_POST['species'] : null;
+	$status = isset($_POST['status']) ? $_POST['status'] : null;
+	$clients = isset($_POST['clients']) ? $_POST['clients'] : null;
+	$id = isset($_POST['id']) ? $_POST['id'] : null;
+	
+	if (strlen($name) == 0 || strlen($species) == 0 || strlen($status) == 0 || strlen($clients) == 0) {
+		return false;
+	}
+	
+	$db = openDatabaseConnection();
+	$sql = "UPDATE patients SET patient_name = :name, species_id = :species, patient_status = :status, clients_id = :clients WHERE patient_id = :id";
+	$query = $db->prepare($sql);
+	$query->execute(array(
+		':name' => $name,
+		':species' => $species,
+		':status' => $status,
+		':clients' => $clients,
+		':id' => $id
+		));
+	$db = null;
+	
+	return true;
+}
+
 function deletePatient($id = null) 
 {
 	if (!$id) {

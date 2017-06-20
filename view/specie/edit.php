@@ -2,7 +2,7 @@
 	<h1>Specie Wijzigen</h1>
 		<form action="<?= URL ?>specie/editSave" method="post">
 			<div>
-	          <input id="name" type="text" name="description" value="<?= $specie['species_description']; ?>">
+	          <input type="text" name="description" value="<?= $specie['species_description']; ?>">
 	          <label for="description">Diersoort</label>
 	        </div>
 			<input type="hidden" name="id" value="<?= $specie['species_id']; ?>">
