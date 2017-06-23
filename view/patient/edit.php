@@ -10,7 +10,6 @@
 				<br>
 				<br>
 				<input type="text" name="status" value="<?= $patient['patient_status']; ?>">
-	
 				<label for="status">Status</label>
 				<br>
 				<br>
