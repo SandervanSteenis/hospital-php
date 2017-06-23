@@ -1,9 +1,9 @@
 <?php
-function getPatients($id) 
+function getPatient($id) 
 {
 	$db = openDatabaseConnection();
 
-	$sql = "SELECT * FROM patients WHERE id = :id";
+	$sql = "SELECT * FROM patients WHERE patient_id = :id";
 	$query = $db->prepare($sql);
 	$query->execute(array(":id" => $id));
 	$db = null;
@@ -83,7 +83,7 @@ function editPatient()
 	}
 	
 	$db = openDatabaseConnection();
-	$sql = "UPDATE patients SET patient_name = :name, species_id = :species, patient_status = :status, clients_id = :clients WHERE patient_id = :id";
+	$sql = "UPDATE patients SET patient_name = :name, species_id = :species, patient_status = :status, client_id = :clients WHERE patient_id = :id";
 	$query = $db->prepare($sql);
 	$query->execute(array(
 		':name' => $name,

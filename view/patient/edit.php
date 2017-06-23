@@ -5,15 +5,16 @@
 	          <input type="text" name="name" value="<?= $patient['patient_name']; ?>">
 	          <label for="name">Naam</label>
 			<br>
- 			 <input type="text" name="species" value="<?= $patient['species_description']; ?>">
+ 			 <input type="text" name="species" value="<?= $patient['species_id']; ?>">
 	          <label for="species">Diersoort(id)</label>
 				<br>
 				<br>
-	          <textarea name="status" value="<?= $patient['patient_status']; ?>" maxlength="500" data-length="500"></textarea>
+				<input type="text" name="status" value="<?= $patient['patient_status']; ?>">
+	
 				<label for="status">Status</label>
 				<br>
 				<br>
-	            <input type="text" name="clients" value="<?= $patient['client_firstname']; ?> <?= $patient['client_lastname']; ?>">
+	            <input type="text" name="clients" value="<?= $patient['client_id']; ?> ">
 	          <label for="clients">Client(id)</label>
 	        </div>
 	        <input type="hidden" name="id" value="<?= $patient['patient_id']; ?>">
